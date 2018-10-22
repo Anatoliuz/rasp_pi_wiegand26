@@ -1,0 +1,14 @@
+2018-10-22 17:16:58       http://192.168.15.116:44376/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:16:59       http://192.168.15.116:44382/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:01       http://192.168.15.116:44388/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:02       http://192.168.15.116:44394/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:03       http://192.168.15.116:44400/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:04       http://192.168.15.116:44406/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:05       http://192.168.15.116:44412/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:06       http://192.168.15.116:44418/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:08       http://192.168.15.116:44424/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:09       http://192.168.15.116:44430/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:10       http://192.168.15.116:44436/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:11       http://192.168.15.116:44442/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:12       http://192.168.15.116:44448/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-22 17:17:13       http://192.168.15.116:44454/wiegand26?data0=5&data1=6&code=FFFFFF

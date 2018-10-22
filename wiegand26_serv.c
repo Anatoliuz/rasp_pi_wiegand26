@@ -12,6 +12,7 @@ Public Domain
 
 #include <netinet/in.h> 
 #include <sys/socket.h>
+#include <time.h>
 
 #include <pigpiod_if2.h>
 #include <yuarel.h>
@@ -102,10 +103,53 @@ char* split_hex_str(char *hexstring, char** pEnd){
     splitted[2] = '\0';
     return splitted;
 }
+void write_log(char* url){
+   FILE* fp = fopen("log.txt","a"); 
+    fseek(fp, 0L, SEEK_END);
 
+   if(fp == NULL){
+       fprintf(stderr, "errno:%s - opening log failed\n ", strerror(errno));
+       close(fp);
+       exit(1);
+   }
+  
+  else{
+       if ( ftell(fp) > 16384 ){
+            if (remove("log.txt") == 0) {
+                 printf("Deleted successfully"); 
+                 fp = fopen("log.txt","w");
+                 } 
+             else
+                 printf("Unable to delete the file"); 
+       }
 
+        char buff[40];
+        struct tm *sTm;
+        char* temp;
+        time_t now = time (0);
+        sTm = gmtime (&now);
+    
+        strftime (buff, sizeof(buff), "%Y-%m-%d %H:%M:%S", sTm);
+        
+        temp = calloc(1000, sizeof(char));
+        strcat(temp, buff);
+        strcat(temp, "       ");
+        strcat(temp, url);
+        strcat(temp, "\n");
+    
+      //  printf("%s\n", temp);
+        int results = fputs(temp, fp);
+            if (results == EOF) {
+                    printf("%s", "failed to write");
+            }
+        }
+    
+        fclose(fp);
+}
 
-
+int create_log(){
+  FILE *fp = fopen("log.txt","w"); 
+}
 
 void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        bool is_data0_in_req = 0;
@@ -113,23 +157,25 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        struct http_message *hm = (struct http_message *) ev_data;
        char *hexstring;
        struct yuarel_param* parsed_params;
-       printf("Full url %s\n",  get_full_url(hm, nc));
+     //  printf("Full url %s\n",  get_full_url(hm, nc));
        long int* bytes;
+       write_log (get_full_url(hm, nc));
        parsed_params =   parse_params( get_full_url(hm, nc) );
+
        for (int i = 0; i < 3; ++i)
             {
-                 printf("\t%s: %s\n", parsed_params[i].key, parsed_params[i].val);
+                 //printf("\t%s: %s\n", parsed_params[i].key, parsed_params[i].val);
                  if (strcmp(parsed_params[i].key, "data0") == 0)
                  {
                    is_data0_in_req = 1;
                    optGpioGreen = atoi(parsed_params[i].val);
-                   printf("green: %d\n", optGpioGreen);        
+                 //  printf("green: %d\n", optGpioGreen);        
                  }
                  else if(strcmp(parsed_params[i].key, "data1") == 0)
                  {
                    is_data1_in_req = 1;
                    optGpioWhite = atoi(parsed_params[i].val);
-                   printf("white: %d\n", optGpioWhite);
+                   //printf("white: %d\n", optGpioWhite);
                  }
                  else if(strcmp(parsed_params[i].key, "code") == 0)
                  {
@@ -168,9 +214,9 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                for (int i = 0; i < 3; ++i)
                {
                    splitted_array = split_hex_str(pEnd, &pEnd);
-                   printf("splitted %p %s\n",pEnd, splitted_array);
+                  // printf("splitted %p %s\n",pEnd, splitted_array);
                    longs[i]  = strtol (splitted_array,&splitted_array,16);
-                   printf("%ld\n",  longs[i]);
+                   //printf("%ld\n",  longs[i]);
                    if (  longs[i] <= 0 )
                    {
                      is_hex_err = 1;
@@ -250,7 +296,7 @@ int main(int argc, char *argv[])
 {
   struct mg_mgr mgr;
   struct mg_connection *nc;
-
+  create_log();
   mg_mgr_init(&mgr, NULL);
   printf("Starting web server on port %s\n", s_http_port);
   nc = mg_bind(&mgr, s_http_port, ev_handler);
@@ -298,7 +344,7 @@ int main(int argc, char *argv[])
                  
                 
                 for (int index = 0; index < BYTES_NUM; index++) {
-                    printf("sending %ld/%d\n", bytes[index], optSize);
+                   // printf("sending %ld/%d\n", bytes[index], optSize);
                     send_wiegand_code(pi,  bytes[index], optSize);  // time_sleep(1.0) \n; to test
                   }
               }
@@ -321,16 +367,16 @@ struct yuarel_param * parse_params(char url_string[] ){
               return 1;
             }
           
-            printf("scheme:\t%s\n", url.scheme);
-            printf("host:\t%s\n", url.host);
-            printf("port:\t%d\n", url.port);
-            printf("path:\t%s\n", url.path);
-            printf("query:\t%s\n", url.query);
-            printf("fragment:\t%s\n", url.fragment);
+         //   printf("scheme:\t%s\n", url.scheme);
+           // printf("host:\t%s\n", url.host);
+           // printf("port:\t%d\n", url.port);
+           // printf("path:\t%s\n", url.path);
+            //printf("query:\t%s\n", url.query);
+          //  printf("fragment:\t%s\n", url.fragment);
 
             p = yuarel_parse_query(url.query, '&', params, 3);
             while (p-- > 0) {
-             printf("\t%s: %s\n", params[p].key, params[p].val);
+             //printf("\t%s: %s\n", params[p].key, params[p].val);
             }
             return params;
 }
@@ -398,7 +444,7 @@ char* get_full_url(struct http_message *hm, struct mg_connection *nc){
               char addr[32];
               mg_sock_addr_to_str(&nc->sa, addr, sizeof(addr),
                                       MG_SOCK_STRINGIFY_IP | MG_SOCK_STRINGIFY_PORT);
-              printf("  Addr:%s\n", addr);
+
               strcat( url, addr );
               strcat( url, get_uri(hm) );
               strcat( url, "?" );
