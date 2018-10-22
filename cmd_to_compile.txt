@@ -1,0 +1,1 @@
+gcc -Wall -pthread  wiegand26_serv.c mongoose.* encoding_* -o serv  -lpigpiod_if2 -lyuarel
