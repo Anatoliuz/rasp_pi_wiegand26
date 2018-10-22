@@ -39,6 +39,11 @@ Run  test:
 $ python test.py
 ```
 
+Get req example
 
+
+```sh
+$ http://192.168.15.116:8000/wiegand26?data0=5&data1=6&code=AABBCC
+```
 
 
