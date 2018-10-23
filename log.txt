@@ -1,14 +1,37 @@
-2018-10-22 17:16:58       http://192.168.15.116:44376/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:16:59       http://192.168.15.116:44382/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:01       http://192.168.15.116:44388/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:02       http://192.168.15.116:44394/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:03       http://192.168.15.116:44400/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:04       http://192.168.15.116:44406/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:05       http://192.168.15.116:44412/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:06       http://192.168.15.116:44418/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:08       http://192.168.15.116:44424/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:09       http://192.168.15.116:44430/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:10       http://192.168.15.116:44436/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:11       http://192.168.15.116:44442/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:12       http://192.168.15.116:44448/wiegand26?data0=5&data1=6&code=FFFFFF
-2018-10-22 17:17:13       http://192.168.15.116:44454/wiegand26?data0=5&data1=6&code=FFFFFF
+2018-10-23 12:10:13       http://192.168.15.116:47434/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:14       http://192.168.15.116:47440/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:15       http://192.168.15.116:47446/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:16       http://192.168.15.116:47452/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:18       http://192.168.15.116:47458/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:19       http://192.168.15.116:47464/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:20       http://192.168.15.116:47470/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:21       http://192.168.15.116:47476/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:22       http://192.168.15.116:47482/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:24       http://192.168.15.116:47488/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:25       http://192.168.15.116:47494/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:26       http://192.168.15.116:47500/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:27       http://192.168.15.116:47506/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:28       http://192.168.15.116:47512/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:30       http://192.168.15.116:47518/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:31       http://192.168.15.116:47524/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:32       http://192.168.15.116:47530/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:33       http://192.168.15.116:47536/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:34       http://192.168.15.116:47542/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:10:35       http://192.168.15.116:47548/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:34       http://192.168.15.116:47558/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:35       http://192.168.15.116:47564/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:36       http://192.168.15.116:47570/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:37       http://192.168.15.116:47576/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:39       http://192.168.15.116:47582/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:40       http://192.168.15.116:47588/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:41       http://192.168.15.116:47594/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:42       http://192.168.15.116:47600/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:43       http://192.168.15.116:47606/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:45       http://192.168.15.116:47612/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:46       http://192.168.15.116:47618/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:47       http://192.168.15.116:47624/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:48       http://192.168.15.116:47630/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:49       http://192.168.15.116:47636/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:51       http://192.168.15.116:47642/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:52       http://192.168.15.116:47648/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK
+2018-10-23 12:27:53       http://192.168.15.116:47654/wiegand26?data0=5&data1=6&code=FFFFFF     response is    HTTP/1.0 200 OK

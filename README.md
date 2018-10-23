@@ -1,4 +1,4 @@
-raspberry pi 3 b+ with http server which receives 3 bytes via http request and transmitts them to wiegand26 reader
+raspberry pi 3 b+ with http server
 =========
 
 
