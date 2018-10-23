@@ -419,7 +419,7 @@ void solve_wrong_data_ports(  struct mg_connection *nc, int ev, void *ev_data){
   mg_send_response_line(nc, 400,
                                          "Content-Type: text/html\r\n"
                                          "Connection: close");
-                              mg_printf(nc, "HTTP/1.0 400 err\r\n\r\nncheck data0 & data1 ports");
+                              mg_printf(nc, "HTTP/1.0 400 err\r\n\r\ncheck data0 & data1 ports");
                                nc->flags |= MG_F_SEND_AND_CLOSE;
 }
 
