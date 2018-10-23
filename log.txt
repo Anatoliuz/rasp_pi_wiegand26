@@ -92,3 +92,87 @@
 2018-10-23 15:34:32       http     response is    
 2018-10-23 15:34:33       http     response is    
 2018-10-23 15:34:34       http     response is    
+2018-10-23 15:56:40       http     response is    200 OK
+2018-10-23 15:56:44       http     response is    
+2018-10-23 15:56:45       http     response is    
+2018-10-23 15:56:46       http     response is    
+2018-10-23 15:56:47       http     response is    
+2018-10-23 15:56:48       http     response is    200 OK
+2018-10-23 15:56:51       http     response is    
+2018-10-23 15:56:52       http     response is    
+2018-10-23 15:56:53       http     response is    
+2018-10-23 15:56:54       http     response is    
+2018-10-23 15:56:55       http     response is    200 OK
+2018-10-23 15:56:58       http     response is    
+2018-10-23 15:56:59       http     response is    
+2018-10-23 16:01:50       http     response is    200 OK
+2018-10-23 16:01:53       http     response is    400 check bytes length
+2018-10-23 16:01:54       http     response is    400 check are bytes in hex
+2018-10-23 16:01:55       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:01:56       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:01:58       http     response is    200 OK
+2018-10-23 16:02:01       http     response is    400 check bytes length
+2018-10-23 16:02:02       http     response is    400 check are bytes in hex
+2018-10-23 16:02:03       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:04       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:05       http     response is    200 OK
+2018-10-23 16:02:08       http     response is    400 check bytes length
+2018-10-23 16:02:09       http     response is    400 check are bytes in hex
+2018-10-23 16:02:10       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:11       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:12       http     response is    200 OK
+2018-10-23 16:02:15       http     response is    400 check bytes length
+2018-10-23 16:02:16       http     response is    400 check are bytes in hex
+2018-10-23 16:02:17       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:18       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:20       http     response is    200 OK
+2018-10-23 16:02:23       http     response is    400 check bytes length
+2018-10-23 16:02:24       http     response is    400 check are bytes in hex
+2018-10-23 16:02:25       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:26       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:27       http     response is    200 OK
+2018-10-23 16:02:30       http     response is    400 check bytes length
+2018-10-23 16:02:31       http     response is    400 check are bytes in hex
+2018-10-23 16:02:32       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:33       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:34       http     response is    200 OK
+2018-10-23 16:02:37       http     response is    400 check bytes length
+2018-10-23 16:02:38       http     response is    400 check are bytes in hex
+2018-10-23 16:02:39       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:40       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:41       http     response is    200 OK
+2018-10-23 16:02:45       http     response is    400 check bytes length
+2018-10-23 16:02:46       http     response is    400 check are bytes in hex
+2018-10-23 16:02:47       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:48       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:49       http     response is    200 OK
+2018-10-23 16:02:52       http     response is    400 check bytes length
+2018-10-23 16:02:53       http     response is    400 check are bytes in hex
+2018-10-23 16:02:54       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:55       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:02:56       http     response is    200 OK
+2018-10-23 16:02:59       http     response is    400 check bytes length
+2018-10-23 16:03:00       http     response is    400 check are bytes in hex
+2018-10-23 16:03:01       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:03:02       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:03:03       http     response is    200 OK
+2018-10-23 16:03:06       http     response is    400 check bytes length
+2018-10-23 16:03:07       http     response is    400 check are bytes in hex
+2018-10-23 16:03:09       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:03:10       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:03:11       http     response is    200 OK
+2018-10-23 16:04:00       http     response is    200 OK
+2018-10-23 16:04:03       http     response is    400 check bytes length
+2018-10-23 16:04:04       http     response is    400 check are bytes in hex
+2018-10-23 16:04:05       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:04:06       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:04:07       http     response is    200 OK
+2018-10-23 16:04:11       http     response is    400 check bytes length
+2018-10-23 16:04:12       http     response is    400 check are bytes in hex
+2018-10-23 16:04:13       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:04:14       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:04:15       http     response is    200 OK
+2018-10-23 16:04:18       http     response is    400 check bytes length
+2018-10-23 16:04:19       http     response is    400 check are bytes in hex
+2018-10-23 16:04:20       http     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-23 16:04:21       http     response is    400 data0=x & data1 = y: x and y values are not valid

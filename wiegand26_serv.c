@@ -120,7 +120,7 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        char* splitted_array;
        char *splitted_array_ptr;
        parsed_params =   parse_params( url );
-      // char* req_to_log = malloc(sizeof(char) * 100);
+       char* req_to_log = malloc(sizeof(char) * 100);
        for (int i = 0; i < 3; ++i)
        {
            if (strcmp(parsed_params[i].key, "data0") == 0)
@@ -138,7 +138,7 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                       hexstring = parsed_params[i].val;
                  }                
        }
-       
+
         if (strlen(hexstring) == 6){
                char* pEnd;
                bool is_hex_err = 0;
@@ -163,21 +163,29 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                 {
                   send_data(optGpioGreen, optGpioWhite, longs);
                    solve_ok_req(nc, ev, ev_data);
+                   strcpy(req_to_log, "200 OK");
                 }
                else if(optGpioGreen < 0 || optGpioWhite < 0){
-                    solve_wrong_data_ports(nc, ev, ev_data);           
+                    solve_wrong_data_ports(nc, ev, ev_data);
+                    strcpy(req_to_log, "400 data0=x & data1 = y: x and y values are not valid");
+           
                     } else  if(is_data0_in_req == 0 || is_data1_in_req == 0) {    
                           solve_wrong_data_names(nc, ev, ev_data);
-                        }else solve_are_bytes_in_hex(nc, ev, ev_data);  
+                          strcpy(req_to_log, "400 check data0=X&data1=Y data names ");
+                        }else{ 
+                             solve_are_bytes_in_hex(nc, ev, ev_data);  
+                             strcpy(req_to_log, "400 check are bytes in hex");
+                            }
                     }               
 
         else {
           solve_wrong_bytes_legth(nc, ev, ev_data);
+           strcpy(req_to_log, "400 check bytes length");
         }
-      // write_log(url, req_to_log);
+       write_log(url, req_to_log);
        free(&(*parsed_params));
        free(&(*url));
-      // free(&(*req_to_log));
+       free(&(*req_to_log));
 }
 
 
