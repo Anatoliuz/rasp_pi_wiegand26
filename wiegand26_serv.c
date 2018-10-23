@@ -110,6 +110,7 @@ int create_log(){
   FILE *fp = fopen("log.txt","a"); 
 }
 
+
 void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        bool is_data0_in_req = 0;
        bool is_data1_in_req = 0;
@@ -117,9 +118,13 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        char *hexstring;
        struct yuarel_param* parsed_params;
        char* url = get_full_url(hm, nc);
+        char* url_to_log = calloc(strlen(url) + 2, sizeof(char));
+       strcpy(url_to_log, url);
        char* splitted_array;
        char *splitted_array_ptr;
+
        parsed_params =   parse_params( url );
+
        char* req_to_log = malloc(sizeof(char) * 100);
        for (int i = 0; i < 3; ++i)
        {
@@ -182,9 +187,11 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
           solve_wrong_bytes_legth(nc, ev, ev_data);
            strcpy(req_to_log, "400 check bytes length");
         }
-       write_log(url, req_to_log);
+
+       write_log(url_to_log, req_to_log);
        free(&(*parsed_params));
        free(&(*url));
+       free(&(*url_to_log));
        free(&(*req_to_log));
 }
 
