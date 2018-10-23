@@ -39,7 +39,12 @@ void send_wiegand_code(
   int pi, unsigned int code, int bits);
 char desc_str[] = "\r\nITProject RFID NetduinoRelay %g <br>  Компания ООО АйТиПроект-программные решения <br> (ITProject-software solutions), 2018. Все права защищены.\r\n";
 char cyr_str[sizeof(desc_str)];
-
+void  solve_are_bytes_in_hex(  struct mg_connection *nc, int ev, void *ev_data);
+void solve_ok_req(  struct mg_connection *nc, int ev, void *ev_data);
+void solve_wrong_data_names(  struct mg_connection *nc, int ev, void *ev_data);
+void solve_wrong_data_ports(  struct mg_connection *nc, int ev, void *ev_data);
+void solve_wrong_bytes_legth(  struct mg_connection *nc, int ev, void *ev_data);
+void solve_wrong_protocol_req(  struct mg_connection *nc, int ev, void *ev_data);
 
 char* split_hex_str(char *hexstring, char** pEnd){
    char* splitted;
@@ -106,37 +111,35 @@ int create_log(){
 }
 
 void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
-        bool is_data0_in_req = 0;
+       bool is_data0_in_req = 0;
        bool is_data1_in_req = 0;
        struct http_message *hm = (struct http_message *) ev_data;
        char *hexstring;
        struct yuarel_param* parsed_params;
        char* url = get_full_url(hm, nc);
        char* splitted_array;
-         char *splitted_array_ptr;
-      // printf("Full url %s\n", url );
+       char *splitted_array_ptr;
        parsed_params =   parse_params( url );
-
+      // char* req_to_log = malloc(sizeof(char) * 100);
        for (int i = 0; i < 3; ++i)
        {
            if (strcmp(parsed_params[i].key, "data0") == 0)
                  {
                    is_data0_in_req = 1;
                    optGpioGreen = atoi(parsed_params[i].val);
-                 //  printf("green: %d\n", optGpioGreen);        
                  }
            else if(strcmp(parsed_params[i].key, "data1") == 0)
                  {
                    is_data1_in_req = 1;
                    optGpioWhite = atoi(parsed_params[i].val);
-                   //printf("white: %d\n", optGpioWhite);
                  }
             else if(strcmp(parsed_params[i].key, "code") == 0)
                  {
                       hexstring = parsed_params[i].val;
                  }                
        }
-     
+       
+        if (strlen(hexstring) == 6){
                char* pEnd;
                bool is_hex_err = 0;
                pEnd = hexstring;
@@ -155,11 +158,26 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                      is_hex_err = 1;
                    }
                }
-                   send_data(optGpioGreen, optGpioWhite, longs);
+                if (is_hex_err == 0 && optGpioGreen >= 0 && optGpioWhite >= 0 
+                        && is_data0_in_req && is_data1_in_req )
+                {
+                  send_data(optGpioGreen, optGpioWhite, longs);
                    solve_ok_req(nc, ev, ev_data);
+                }
+               else if(optGpioGreen < 0 || optGpioWhite < 0){
+                    solve_wrong_data_ports(nc, ev, ev_data);           
+                    } else  if(is_data0_in_req == 0 || is_data1_in_req == 0) {    
+                          solve_wrong_data_names(nc, ev, ev_data);
+                        }else solve_are_bytes_in_hex(nc, ev, ev_data);  
+                    }               
 
+        else {
+          solve_wrong_bytes_legth(nc, ev, ev_data);
+        }
+      // write_log(url, req_to_log);
        free(&(*parsed_params));
        free(&(*url));
+      // free(&(*req_to_log));
 }
 
 
@@ -274,13 +292,6 @@ struct yuarel_param * parse_params(char url_string[] ){
               fprintf(stderr, "Could not parse url!\n");
               return 1;
             }
-          
-         //   printf("scheme:\t%s\n", url.scheme);
-           // printf("host:\t%s\n", url.host);
-           // printf("port:\t%d\n", url.port);
-           // printf("path:\t%s\n", url.path);
-            //printf("query:\t%s\n", url.query);
-          //  printf("fragment:\t%s\n", url.fragment);
 
             p = yuarel_parse_query(url.query, '&', params, 3);
             while (p-- > 0) {
@@ -412,7 +423,6 @@ void solve_ok_req(  struct mg_connection *nc, int ev, void *ev_data){
                         nc->flags |= MG_F_SEND_AND_CLOSE;
 
 }
-
 void  solve_are_bytes_in_hex(  struct mg_connection *nc, int ev, void *ev_data){
   mg_send_response_line(nc, 400,
                                          "Content-Type: text/html\r\n"
