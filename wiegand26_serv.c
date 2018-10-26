@@ -12,11 +12,11 @@
  
 #include "mongoose.h"
 
-#define PORT 8000 
-#define version 0.1
+#define PORT 80 
 #define BYTES_NUM 3
 
-static const char *s_http_port = "8000";
+static const char *s_http_port = "80";
+static const char *version = "1.0.0";
 
 
 int optGpioGreen = -1;
@@ -37,7 +37,7 @@ void solve_empty_req(struct mg_connection *nc, int ev, void *ev_data);
 struct yuarel_param * parse_params(char url_string[]);
 void send_wiegand_code(
   int pi, unsigned int code, int bits);
-char desc_str[] = "\r\nITProject RFID NetduinoRelay %g <br>  Компания ООО АйТиПроект-программные решения <br> (ITProject-software solutions), 2018. Все права защищены.\r\n";
+char desc_str[] = "\r\nITProject RFID WiegandController <br>  Компания ООО АйТиПроект-программные решения <br> (ITProject-software solutions), 2018. Все права защищены.\r\n";
 char cyr_str[sizeof(desc_str)];
 void  solve_are_bytes_in_hex(  struct mg_connection *nc, int ev, void *ev_data);
 void solve_ok_req(  struct mg_connection *nc, int ev, void *ev_data);
@@ -154,6 +154,12 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                    splitted_array = split_hex_str(pEnd, &pEnd);
                    splitted_array_ptr = splitted_array;
                   // printf("splitted %p %s\n",pEnd, splitted_array);
+                   if (strcmp(splitted_array, "00") == 0)
+                   {
+                     longs[i] = 0;
+                     //printf("%s\n",splitted_array_ptr );
+                     break;
+                   }
                    longs[i]  = strtol (splitted_array,&splitted_array,16);
                    //printf("%ld\n",  longs[i]);
                     free(&(*splitted_array_ptr));
@@ -393,7 +399,7 @@ void solve_empty_req(struct mg_connection *nc, int ev, void *ev_data){
             mg_send_response_line(nc, 200,
                                    "Content-Type: text/html\r\n"
                                    "Connection: close");
-              mg_printf(nc, cyr_str, version);
+              mg_printf(nc, "%s %s", cyr_str, version);
               nc->flags |= MG_F_SEND_AND_CLOSE;
        
 }

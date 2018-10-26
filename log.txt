@@ -1,106 +1,60 @@
-2018-10-23 16:30:03       http://192.168.15.116:55762/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:04       http://192.168.15.116:55764/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:05       http://192.168.15.116:55766/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:30:08       http://192.168.15.116:55776/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:30:09       http://192.168.15.116:55778/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:30:10       http://192.168.15.116:55780/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:11       http://192.168.15.116:55782/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:12       http://192.168.15.116:55784/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:30:15       http://192.168.15.116:55794/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:30:16       http://192.168.15.116:55796/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:30:17       http://192.168.15.116:55798/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:18       http://192.168.15.116:55800/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:19       http://192.168.15.116:55802/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:30:22       http://192.168.15.116:55812/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:30:24       http://192.168.15.116:55814/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:30:25       http://192.168.15.116:55816/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:26       http://192.168.15.116:55818/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:30:27       http://192.168.15.116:55820/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:30:30       http://192.168.15.116:55830/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:31:56       http://192.168.15.116:55838/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:31:59       http://192.168.15.116:55848/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:00       http://192.168.15.116:55850/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:01       http://192.168.15.105:61893/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:01       http://192.168.15.116:55852/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:02       http://192.168.15.116:55854/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:03       http://192.168.15.116:55856/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:04       http://192.168.15.105:61894/wiegand26?data0=5&data1=6&code=F     response is    400 check bytes length
-2018-10-23 16:32:05       http://192.168.15.116:55866/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:06       http://192.168.15.116:55868/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:07       http://192.168.15.116:55870/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:08       http://192.168.15.116:55872/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:09       http://192.168.15.105:61896/wiegand26?data0=5&data1=6&code=QWERTY     response is    400 check are bytes in hex
-2018-10-23 16:32:09       http://192.168.15.116:55874/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:11       http://192.168.15.116:55884/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:12       http://192.168.15.116:55886/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:13       http://192.168.15.116:55888/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:13       http://192.168.15.105:61898/wiegand26?data0=5&data1=6&code=AAAAAA     response is    200 OK
-2018-10-23 16:32:14       http://192.168.15.116:55894/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 check data0=X&data1=Y data names 
-2018-10-23 16:32:14       http://192.168.15.116:55896/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:17       http://192.168.15.116:55906/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:17       http://192.168.15.116:55908/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:18       http://192.168.15.116:55910/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:19       http://192.168.15.116:55912/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:20       http://192.168.15.116:55914/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:22       http://192.168.15.116:55924/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:23       http://192.168.15.116:55926/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:24       http://192.168.15.116:55928/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:25       http://192.168.15.116:55930/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:26       http://192.168.15.116:55932/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:28       http://192.168.15.116:55942/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:29       http://192.168.15.116:55944/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:30       http://192.168.15.116:55946/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:31       http://192.168.15.116:55948/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:31       http://192.168.15.105:61906/wiegand26?data0=-1&data1=6&code=AAAAAA     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:31       http://192.168.15.116:55950/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:34       http://192.168.15.116:55960/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:35       http://192.168.15.116:55962/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:36       http://192.168.15.116:55964/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:37       http://192.168.15.116:55966/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:38       http://192.168.15.116:55968/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:41       http://192.168.15.116:55978/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:42       http://192.168.15.116:55980/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:43       http://192.168.15.116:55982/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:44       http://192.168.15.116:55984/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:44       http://192.168.15.105:61909/wiegand26?data0=0&data1=6&code=AAAAAA     response is    200 OK
-2018-10-23 16:32:44       http://192.168.15.116:55990/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:46       http://192.168.15.116:56000/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:47       http://192.168.15.116:56002/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:48       http://192.168.15.116:56004/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:49       http://192.168.15.105:61911/wiegand26?data0=5&data1=6&code=AAAAAA     response is    200 OK
-2018-10-23 16:32:49       http://192.168.15.116:56008/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 check data0=X&data1=Y data names 
-2018-10-23 16:32:49       http://192.168.15.116:56012/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:52       http://192.168.15.116:56022/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:53       http://192.168.15.105:61913/wiegand26?dat=5&data1=6&code=AAAAAA     response is    400 check data0=X&data1=Y data names 
-2018-10-23 16:32:53       http://192.168.15.116:56024/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:32:53       http://192.168.15.116:56026/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:54       http://192.168.15.116:56028/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:32:55       http://192.168.15.116:56030/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:32:58       http://192.168.15.116:56040/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:32:59       http://192.168.15.116:56042/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:00       http://192.168.15.116:56044/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:01       http://192.168.15.116:56046/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:02       http://192.168.15.116:56048/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:33:05       http://192.168.15.116:56058/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:33:06       http://192.168.15.116:56060/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:07       http://192.168.15.116:56062/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:08       http://192.168.15.116:56064/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:10       http://192.168.15.116:56066/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:33:13       http://192.168.15.116:56076/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:33:14       http://192.168.15.116:56078/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:15       http://192.168.15.116:56080/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:16       http://192.168.15.116:56082/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:17       http://192.168.15.116:56084/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:33:20       http://192.168.15.116:56094/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:33:21       http://192.168.15.116:56096/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:22       http://192.168.15.116:56098/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:23       http://192.168.15.116:56100/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:24       http://192.168.15.116:56102/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:33:27       http://192.168.15.116:56112/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:33:28       http://192.168.15.116:56114/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:29       http://192.168.15.116:56116/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:30       http://192.168.15.116:56118/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
-2018-10-23 16:33:32       http://192.168.15.116:56120/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
-2018-10-23 16:33:35       http://192.168.15.116:56130/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
-2018-10-23 16:33:36       http://192.168.15.116:56132/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
-2018-10-23 16:33:37       http://192.168.15.116:56134/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:19       http://192.168.15.116:46830/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:20       http://192.168.15.116:46832/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:23       http://192.168.15.116:46842/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 10:59:24       http://192.168.15.116:46844/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 10:59:25       http://192.168.15.116:46846/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:26       http://192.168.15.116:46848/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:27       http://192.168.15.116:46850/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:30       http://192.168.15.116:46860/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 10:59:31       http://192.168.15.116:46862/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 10:59:32       http://192.168.15.116:46864/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:33       http://192.168.15.116:46866/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:35       http://192.168.15.116:46868/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:38       http://192.168.15.116:46878/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 10:59:39       http://192.168.15.116:46880/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 10:59:40       http://192.168.15.116:46882/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:41       http://192.168.15.116:46884/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:42       http://192.168.15.116:46886/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:45       http://192.168.15.116:46896/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 10:59:46       http://192.168.15.116:46898/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 10:59:47       http://192.168.15.116:46900/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:48       http://192.168.15.116:46902/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:49       http://192.168.15.116:46904/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:52       http://192.168.15.116:46914/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 10:59:53       http://192.168.15.116:46916/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 10:59:54       http://192.168.15.116:46918/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:55       http://192.168.15.116:46920/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 10:59:56       http://192.168.15.116:46922/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 10:59:59       http://192.168.15.116:46932/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 11:00:01       http://192.168.15.116:46934/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 11:00:02       http://192.168.15.116:46936/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:03       http://192.168.15.116:46938/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:04       http://192.168.15.116:46940/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 11:00:07       http://192.168.15.116:46950/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 11:00:08       http://192.168.15.116:46952/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 11:00:09       http://192.168.15.116:46954/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:10       http://192.168.15.116:46956/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:11       http://192.168.15.116:46958/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 11:00:14       http://192.168.15.116:46968/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 11:00:15       http://192.168.15.116:46970/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 11:00:16       http://192.168.15.116:46972/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:17       http://192.168.15.116:46974/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:18       http://192.168.15.116:46976/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 11:00:21       http://192.168.15.116:46986/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 11:00:22       http://192.168.15.116:46988/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 11:00:23       http://192.168.15.116:46990/wiegand26?data0=-1&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:25       http://192.168.15.116:46992/wiegand26?data2=5&data1=6&code=FFFFFF     response is    400 data0=x & data1 = y: x and y values are not valid
+2018-10-25 11:00:26       http://192.168.15.116:46994/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 11:00:29       http://192.168.15.116:47004/wiegand26?data0=5&data1=6&code=FFFFF     response is    400 check bytes length
+2018-10-25 11:00:30       http://192.168.15.116:47006/wiegand26?data0=5&data1=6&code=QFFFFF     response is    400 check are bytes in hex
+2018-10-25 11:02:58       http://192.168.15.105:54074/wiegand26?data0=5&data1=6&code=AAAAAA     response is    200 OK
+2018-10-25 11:03:00       http://192.168.15.105:54076/wiegand26?data0=5&data1=6&code=A     response is    400 check bytes length
+2018-10-25 11:03:07       http://192.168.15.105:54079/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-10-25 11:04:08       http://192.168.15.105:54091/wiegand26?data0=5&data1=6&co     response is    400 check bytes length
+2018-10-26 14:24:31       http://192.168.15.105:55914/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-10-26 14:24:34       http://192.168.15.105:55916/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-10-26 14:24:34       http://192.168.15.105:55918/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-10-26 14:25:30       http://192.168.15.105:55946/wiegand26?data0=5&data1=6&code=000000     response is    200 OK
+2018-10-26 14:25:44       http://192.168.15.105:55949/wiegand26?data0=5&data1=6&code=004A1F     response is    200 OK
+2018-10-26 14:26:12       http://192.168.15.105:55956/wiegand26?data0=5&data1=6&code=004A1F     response is    200 OK
+2018-10-26 14:26:20       http://192.168.15.105:55959/wiegand26?data0=5&data1=6&code=004A00     response is    200 OK

@@ -1,0 +1,29 @@
+==881== Memcheck, a memory error detector
+==881== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==881== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==881== Command: ./serv .txt
+==881== 
+Starting web server on port 8000
+Failed to create listener
+==881== 
+==881== HEAP SUMMARY:
+==881==     in use at exit: 368 bytes in 3 blocks
+==881==   total heap usage: 5 allocs, 2 frees, 4,584 bytes allocated
+==881== 
+==881== 16 (4 direct, 12 indirect) bytes in 1 blocks are definitely lost in loss record 2 of 3
+==881==    at 0x4847568: malloc (vg_replace_malloc.c:299)
+==881==    by 0x1A90B: mg_mgr_init_opt (mongoose.c:2536)
+==881==    by 0x1A847: mg_mgr_init (mongoose.c:2503)
+==881==    by 0x12793: main (wiegand26_serv.c:247)
+==881== 
+==881== LEAK SUMMARY:
+==881==    definitely lost: 4 bytes in 1 blocks
+==881==    indirectly lost: 12 bytes in 1 blocks
+==881==      possibly lost: 0 bytes in 0 blocks
+==881==    still reachable: 352 bytes in 1 blocks
+==881==         suppressed: 0 bytes in 0 blocks
+==881== Reachable blocks (those to which a pointer was found) are not shown.
+==881== To see them, rerun with: --leak-check=full --show-leak-kinds=all
+==881== 
+==881== For counts of detected and suppressed errors, rerun with: -v
+==881== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 6 from 3)
