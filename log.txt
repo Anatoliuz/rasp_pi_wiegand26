@@ -15,3 +15,111 @@
 2018-11-06 10:52:23       http://192.168.15.204:58267/wiegand26?data0=5&data1=6&code=332211     response is    200 OK
 2018-11-06 10:56:20       http://192.168.15.204:58330/wiegand26?data0=5&data1=6&code=332211     response is    200 OK
 2018-11-06 10:59:22       http://192.168.15.204:58386/wiegand26?data0=5&data1=6&code=332211     response is    200 OK
+2018-11-06 11:30:24       http://192.168.15.204:58896/wiegand26?data0=5&data1=6&code=332211     response is    200 OK
+2018-11-06 11:30:36       http://192.168.15.204:58904/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:32:27       http://192.168.15.204:58949/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:32:35       http://192.168.15.204:58952/wiegand26?data0=5&data1=6&code=AABBCC     response is    200 OK
+2018-11-06 11:32:43       http://192.168.15.204:58954/wiegand26?data0=5&data1=6&code=FFFFFF     response is    200 OK
+2018-11-06 11:32:50       http://192.168.15.204:58957/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK
+2018-11-06 11:35:02       http://192.168.15.117:57138/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:03       http://192.168.15.117:57144/wiegand26?data0=5&data1=6&code=AABBCC     response is    200 OK
+2018-11-06 11:35:04       http://192.168.15.117:57150/wiegand26?data0=5&data1=6&code=332244     response is    200 OK
+2018-11-06 11:35:05       http://192.168.15.117:57156/wiegand26?data0=5&data1=6&code=778899     response is    200 OK
+2018-11-06 11:35:06       http://192.168.15.117:57162/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:35:07       http://192.168.15.117:57164/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:08       http://192.168.15.117:57170/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:09       http://192.168.15.117:57176/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:11       http://192.168.15.117:57182/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:12       http://192.168.15.117:57188/wiegand26?data0=6&data1=5&code=222222     response is    200 OK
+2018-11-06 11:35:13       http://192.168.15.117:57194/wiegand26?data0=8&data1=7&code=FFFFFF     response is    200 OK
+2018-11-06 11:35:14       http://192.168.15.117:57200/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:15       http://192.168.15.117:57206/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-11-06 11:35:16       http://192.168.15.117:57208/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:17       http://192.168.15.117:57214/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:18       http://192.168.15.117:57220/wiegand26?data0=5&data1=6&code=AABBCC     response is    200 OK
+2018-11-06 11:35:19       http://192.168.15.117:57226/wiegand26?data0=5&data1=6&code=332244     response is    200 OK
+2018-11-06 11:35:20       http://192.168.15.117:57232/wiegand26?data0=5&data1=6&code=778899     response is    200 OK
+2018-11-06 11:35:21       http://192.168.15.117:57238/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:35:22       http://192.168.15.117:57240/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:24       http://192.168.15.117:57246/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:25       http://192.168.15.117:57252/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:26       http://192.168.15.117:57258/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:27       http://192.168.15.117:57264/wiegand26?data0=6&data1=5&code=222222     response is    200 OK
+2018-11-06 11:35:28       http://192.168.15.117:57270/wiegand26?data0=8&data1=7&code=FFFFFF     response is    200 OK
+2018-11-06 11:35:29       http://192.168.15.117:57276/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:30       http://192.168.15.117:57282/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-11-06 11:35:31       http://192.168.15.117:57284/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:32       http://192.168.15.117:57290/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:33       http://192.168.15.117:57296/wiegand26?data0=5&data1=6&code=AABBCC     response is    200 OK
+2018-11-06 11:35:34       http://192.168.15.117:57302/wiegand26?data0=5&data1=6&code=332244     response is    200 OK
+2018-11-06 11:35:35       http://192.168.15.117:57308/wiegand26?data0=5&data1=6&code=778899     response is    200 OK
+2018-11-06 11:35:36       http://192.168.15.117:57314/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:35:37       http://192.168.15.117:57316/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:39       http://192.168.15.117:57322/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:40       http://192.168.15.117:57328/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:41       http://192.168.15.117:57334/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:42       http://192.168.15.117:57340/wiegand26?data0=6&data1=5&code=222222     response is    200 OK
+2018-11-06 11:35:43       http://192.168.15.117:57346/wiegand26?data0=8&data1=7&code=FFFFFF     response is    200 OK
+2018-11-06 11:35:44       http://192.168.15.117:57352/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:45       http://192.168.15.117:57358/wiegand26?data0=5&data1=6&code=000000     response is    400 check are bytes in hex
+2018-11-06 11:35:46       http://192.168.15.117:57360/wiegand26?data0=7&data1=8&code=222222     response is    200 OK
+2018-11-06 11:35:47       http://192.168.15.117:57366/wiegand26?data0=5&data1=6&code=112233     response is    200 OK
+2018-11-06 11:35:48       http://192.168.15.117:57372/wiegand26?data0=5&data1=6&code=AABBCC     response is    200 OK
+2018-11-06 11:35:49       http://192.168.15.117:57378/wiegand26?data0=5&data1=6&code=332244     response is    200 OK
+2018-11-06 11:35:50       http://192.168.15.117:57384/wiegand26?data0=5&data1=6&code=778899     response is    200 OK
+2018-11-06 11:37:12       http://192.168.15.204:59080/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:45       http://192.168.15.204:59093/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:46       http://192.168.15.204:59095/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:47       http://192.168.15.204:59098/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:47       http://192.168.15.204:59100/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:47       http://192.168.15.204:59102/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:37:47       http://192.168.15.204:59104/wiegand26?data0=5&data1=6&code=00FFAA     response is    400 check are bytes in hex
+2018-11-06 11:38:17       http://192.168.15.204:59123/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:33       http://192.168.15.117:57394/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:34       http://192.168.15.117:57400/wiegand26?data0=5&data1=6&code=BBCC00     response is    200 OK
+2018-11-06 11:39:35       http://192.168.15.117:57406/wiegand26?data0=5&data1=6&code=000001     response is    200 OK
+2018-11-06 11:39:36       http://192.168.15.117:57412/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK
+2018-11-06 11:39:37       http://192.168.15.117:57418/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:38       http://192.168.15.117:57424/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:40       http://192.168.15.117:57430/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:41       http://192.168.15.117:57436/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:42       http://192.168.15.117:57442/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:43       http://192.168.15.117:57448/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:44       http://192.168.15.117:57454/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:45       http://192.168.15.117:57460/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:46       http://192.168.15.117:57466/wiegand26?data0=5&data1=6&code=BBCC00     response is    200 OK
+2018-11-06 11:39:47       http://192.168.15.117:57472/wiegand26?data0=5&data1=6&code=000001     response is    200 OK
+2018-11-06 11:39:48       http://192.168.15.117:57478/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK
+2018-11-06 11:39:49       http://192.168.15.117:57484/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:50       http://192.168.15.117:57490/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:51       http://192.168.15.117:57496/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:52       http://192.168.15.117:57502/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:53       http://192.168.15.117:57508/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:55       http://192.168.15.117:57514/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:56       http://192.168.15.117:57520/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:57       http://192.168.15.117:57526/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:39:58       http://192.168.15.117:57532/wiegand26?data0=5&data1=6&code=BBCC00     response is    200 OK
+2018-11-06 11:39:59       http://192.168.15.117:57538/wiegand26?data0=5&data1=6&code=000001     response is    200 OK
+2018-11-06 11:40:00       http://192.168.15.117:57544/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK
+2018-11-06 11:40:01       http://192.168.15.117:57550/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:02       http://192.168.15.117:57556/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:03       http://192.168.15.117:57562/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:04       http://192.168.15.117:57568/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:05       http://192.168.15.117:57574/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:06       http://192.168.15.117:57580/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:07       http://192.168.15.117:57586/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:08       http://192.168.15.117:57592/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:09       http://192.168.15.117:57598/wiegand26?data0=5&data1=6&code=BBCC00     response is    200 OK
+2018-11-06 11:40:11       http://192.168.15.117:57604/wiegand26?data0=5&data1=6&code=000001     response is    200 OK
+2018-11-06 11:40:12       http://192.168.15.117:57610/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK
+2018-11-06 11:40:13       http://192.168.15.117:57616/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:14       http://192.168.15.117:57622/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:15       http://192.168.15.117:57628/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:16       http://192.168.15.117:57634/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:17       http://192.168.15.117:57640/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:18       http://192.168.15.117:57646/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:19       http://192.168.15.117:57652/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:20       http://192.168.15.117:57658/wiegand26?data0=5&data1=6&code=00FFAA     response is    200 OK
+2018-11-06 11:40:21       http://192.168.15.117:57664/wiegand26?data0=5&data1=6&code=BBCC00     response is    200 OK
+2018-11-06 11:40:22       http://192.168.15.117:57670/wiegand26?data0=5&data1=6&code=000001     response is    200 OK
+2018-11-06 11:40:23       http://192.168.15.117:57676/wiegand26?data0=5&data1=6&code=FDFDFD     response is    200 OK

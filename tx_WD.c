@@ -340,7 +340,10 @@ int get_dec_code(char* hex) {
    printf("res bin res:%s\n", res_bin);
    
    printf("res bin dec:%d\n", binaryToDecimal(res_bin));
-   return  binaryToDecimal(res_bin);
+   int result = binaryToDecimal(res_bin);
+   free(bin); free(res_bin);
+   free(bin_part_1); free(bin_part_2);
+   return  result;
 }
 
 
