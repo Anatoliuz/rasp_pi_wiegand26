@@ -12,12 +12,8 @@
  
 #include "mongoose.h"
 
-#define PORT 80 
-#define BYTES_NUM 3
-
-static const char *s_http_port = "80";
+static const char *s_http_port = "8000";
 static const char *version = "1.0.0";
-
 
 int optGpioGreen = -1;
 int optGpioWhite = -1;
@@ -32,7 +28,6 @@ char *optPort   = NULL;
 int wid0, wid1;
 
 char* get_full_url(struct http_message *hm, struct mg_connection *nc);
-
 void solve_empty_req(struct mg_connection *nc, int ev, void *ev_data);
 struct yuarel_param * parse_params(char url_string[]);
 void send_wiegand_code(
@@ -46,21 +41,27 @@ void solve_wrong_data_ports(  struct mg_connection *nc, int ev, void *ev_data);
 void solve_wrong_bytes_legth(  struct mg_connection *nc, int ev, void *ev_data);
 void solve_wrong_protocol_req(  struct mg_connection *nc, int ev, void *ev_data);
 
-char* split_hex_str(char *hexstring, char** pEnd){
-   char* splitted;
-    splitted = malloc(3*sizeof(char));  
-    int i = 0;
-    while(*pEnd != '\0' && i < 2) {
-      splitted[i] = **pEnd;
-     
-      (*pEnd)++;
-      ++i;
+
+int is_hex_str(char* input, int* num) {
+  int is_hex = 1;
+  int i = 0;
+  char ch;
+  ch = *input;
+
+  // counting of hexadecimal numbers 
+  while (ch != '\0') {
+    ch = input[i];
+    if (isxdigit(ch)) {
+      ++(*num);
     } 
-    splitted[2] = '\0';
-    return splitted;
+    else if (ch == '\0') break;
+    else {
+      is_hex = 0;
+    }
+    i++;
+  }
+  return is_hex;
 }
-
-
 
 
 void hex_binary(const char* input, char * res) {
@@ -85,7 +86,6 @@ void hex_binary(const char* input, char * res) {
       }
       p++;
    }
-   //printf("Res:%s\n", res);
 }
 int parity_check_2(char* num) {
    int counter = 0;
@@ -120,9 +120,7 @@ int parity_check_1(char* num) {
 
 int binaryToDecimal(char* n)
 {
-   
    int dec_value = 0;
-
    // Initializing base value to 1, i.e 2^0 
    int base = 1;
 
@@ -133,7 +131,6 @@ int binaryToDecimal(char* n)
          dec_value += base;
       base = base * 2;
    }
-
    return dec_value;
 }
 char* bin_conv(char* s) {
@@ -166,26 +163,15 @@ int get_dec_code(char* hex) {
       bin_part_2[i-12] = bin[i];
    }
    bin_part_2[12] = '\0';
-   printf("bin1:%s\n", bin_part_1);
-   printf("bin2:%s\n", bin_part_2);
-
-   //printf("par bin1:%d\n", parity_check_1(bin_part_1));
-   //printf("par bin2:%d\n", parity_check_2(bin_part_2));
    char *res_bin = malloc(sizeof(char) * 27);
    char parity[2];
    snprintf(parity, sizeof(parity), "%d", parity_check_1(bin_part_1));
    strcpy(res_bin, parity );
-
- //  printf("res bin:%s\n", res_bin);
    strcat(res_bin, bin_part_1);
-  // printf("res bin:%s\n", res_bin);
    strcat(res_bin, bin_part_2);
-//   printf("res bin:%s\n", res_bin);
    snprintf(parity, sizeof(parity), "%d", parity_check_2(bin_part_2));
    strcat(res_bin, parity);
-   printf("res bin res:%s\n", res_bin);
-   
-   printf("res bin dec:%d\n", binaryToDecimal(res_bin));
+
    int result = binaryToDecimal(res_bin);
    free(bin); free(res_bin);
    free(bin_part_1); free(bin_part_2);
@@ -253,7 +239,7 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
        char* url = get_full_url(hm, nc);
         char* url_to_log = calloc(strlen(url) + 2, sizeof(char));
        strcpy(url_to_log, url);
-       char* splitted_array;
+       char* splitted_array = NULL;
        char *splitted_array_ptr;
 
        parsed_params =   parse_params( url );
@@ -276,60 +262,39 @@ void solve_wiegand_request(struct mg_connection *nc, int ev, void *ev_data){
                       hexstring = parsed_params[i].val;
                  }                
        }
-
-        if (strlen(hexstring) == 6){
-               char* pEnd;
-               bool is_hex_err = 0;
-               pEnd = hexstring;
-               long int longs[3];
-               for (int i = 0; i < 3; ++i)
-               {
-                   splitted_array = split_hex_str(pEnd, &pEnd);
-                   splitted_array_ptr = splitted_array;
-                  // printf("splitted %p %s\n",pEnd, splitted_array);
-                   if (strcmp(splitted_array, "00") == 0)
-                   {
-                    longs[i] = 0;
-                     //printf("%s\n",splitted_array_ptr );
-                     break;
-                   }
-                   longs[i]  = strtol (splitted_array,&splitted_array,16);
-                   //printf("%ld\n",  longs[i]);
-                    free(&(*splitted_array_ptr));
-
-                   if (  longs[i] <= 0 )
-                   {
-                     is_hex_err = 1;
-                   }
-               }
+        int is_hex_err = 0;
+        int numofhex = 0;
+        int is_hex = 0;
+        is_hex = is_hex_str( hexstring, &numofhex);
+        if (numofhex != 6  && is_hex == 1)
+        {
+           solve_wrong_bytes_legth(nc, ev, ev_data);
+           strcpy(req_to_log, "400 check bytes length");
+        }else if( is_hex == 0){
+                 solve_are_bytes_in_hex(nc, ev, ev_data);  
+                 strcpy(req_to_log, "400 check are bytes in 6 lengthed hex");
+        }else {
                 if (is_hex_err == 0 && optGpioGreen >= 0 && optGpioWhite >= 0 
-                        && is_data0_in_req && is_data1_in_req )
+                        && is_data0_in_req && is_data1_in_req  )
                 {
+
                    send_data(optGpioGreen, optGpioWhite, hexstring);
                    solve_ok_req(nc, ev, ev_data);
                    strcpy(req_to_log, "200 OK");
                 }
-               else if(optGpioGreen < 0 || optGpioWhite < 0){
+               else if(optGpioGreen < 0 || optGpioWhite < 0  ){
                     solve_wrong_data_ports(nc, ev, ev_data);
                     strcpy(req_to_log, "400 data0=x & data1 = y: x and y values are not valid");
            
-                    } else  if(is_data0_in_req == 0 || is_data1_in_req == 0) {    
+                    } else  {    
                           solve_wrong_data_names(nc, ev, ev_data);
                           strcpy(req_to_log, "400 check data0=X&data1=Y data names ");
-                        }else{ 
-                             solve_are_bytes_in_hex(nc, ev, ev_data);  
-                             strcpy(req_to_log, "400 check are bytes in hex");
-                            }
-                    }               
-
-        else {
-          solve_wrong_bytes_legth(nc, ev, ev_data);
-           strcpy(req_to_log, "400 check bytes length");
-        }
-
+                        }
+         }       
        write_log(url_to_log, req_to_log);
        free(&(*parsed_params));
        free(&(*url));
+      
        free(&(*url_to_log));
        free(&(*req_to_log));
 }
@@ -375,7 +340,7 @@ static void ev_handler(struct mg_connection *nc, int ev, void *ev_data) {
          }
        }
        
-    
+
 
 
 int main(int argc, char *argv[])
@@ -404,33 +369,33 @@ int main(int argc, char *argv[])
    
   void send_data(int optGpioGreen, int optGpioWhite, char* hexcode)
   {
-              int pi;
-        
-              pi = pigpio_start(optHost, optPort); /* Connect to Pi. */
-           
-              if (pi >= 0)
-              {
-                 set_mode(pi, optGpioGreen, PI_OUTPUT);
-                 set_mode(pi, optGpioWhite, PI_OUTPUT);
-           
-                 wave_add_new(pi);
-           
-                 wave_add_generic(pi, 2, (gpioPulse_t[]){{0, 1<<optGpioGreen, optPulseLen},
-                                                         {1<<optGpioGreen, 0, optBitGap}});
-                 wid0 = wave_create(pi);
-           
-                 wave_add_generic(pi, 2, (gpioPulse_t[]){{0, 1<<optGpioWhite, optPulseLen},
-                                                         {1<<optGpioWhite, 0, optBitGap}});
-                 wid1 = wave_create(pi); 
-                 
-                
-                printf("sending hex code %s\n", hexcode);
-                 send_wiegand_code(pi, get_dec_code (  hexcode), optSize);  
+         int pi;
+   
+         pi = pigpio_start(optHost, optPort); /* Connect to Pi. */
+      
+         if (pi >= 0)
+         {
+            set_mode(pi, optGpioGreen, PI_OUTPUT);
+            set_mode(pi, optGpioWhite, PI_OUTPUT);
+      
+            wave_add_new(pi);
+      
+            wave_add_generic(pi, 2, (gpioPulse_t[]){{0, 1<<optGpioGreen, optPulseLen},
+                                                    {1<<optGpioGreen, 0, optBitGap}});
+            wid0 = wave_create(pi);
+      
+            wave_add_generic(pi, 2, (gpioPulse_t[]){{0, 1<<optGpioWhite, optPulseLen},
+                                                    {1<<optGpioWhite, 0, optBitGap}});
+            wid1 = wave_create(pi); 
             
-              }
-                wave_delete(pi, wid0);
-                wave_delete(pi, wid1);
-                pigpio_stop(pi);
+           
+            printf("sending hex code %s\n", hexcode);
+            send_wiegand_code(pi, get_dec_code (  hexcode), optSize);  
+       
+         }
+           wave_delete(pi, wid0);
+           wave_delete(pi, wid1);
+           pigpio_stop(pi);
 }
 
 // default num of params is 3: two channels and data
