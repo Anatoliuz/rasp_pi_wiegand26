@@ -22,7 +22,8 @@ a null terminator. Therefore, the first slash will be missing in the path.
 ## To build
 
 ```sh
-$ gcc -Wall -pthread  wiegand26_serv.c mongoose.* encoding_* -o serv  -lpigpiod_if2 -lyuarel
+$ gcc -Wall -pthread -ggdb3  wiegand26_serv.c mongoose.* encoding_* -o ITProjectRFIDWiegandController -lpigpiod_if2 -lyuarel
+
 ```
 
 ## Try it
