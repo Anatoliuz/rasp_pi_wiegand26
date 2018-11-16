@@ -32,7 +32,7 @@ void solve_empty_req(struct mg_connection *nc, int ev, void *ev_data);
 struct yuarel_param * parse_params(char url_string[]);
 void send_wiegand_code(
   int pi, unsigned int code, int bits);
-char desc_str[] = "\r\nITProject RFID WiegandController <br>  Компания ООО АйТиПроект-программные решения <br> (ITProject-software solutions), 2018. Все права защищены.\r\n";
+char desc_str[] = "\r\nITProject RFID WiegandController 1.0.0.0 <br>  Компания ООО АйТиПроект-программные решения <br> (ITProject-software solutions), 2018. Все права защищены.\r\n";
 char cyr_str[sizeof(desc_str)];
 void  solve_are_bytes_in_hex(  struct mg_connection *nc, int ev, void *ev_data);
 void solve_ok_req(  struct mg_connection *nc, int ev, void *ev_data);
