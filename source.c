@@ -13,7 +13,6 @@
 #include "mongoose.h"
 
 static const char *s_http_port = "8000";
-static const char *version = "1.0.0";
 
 int optGpioGreen = -1;
 int optGpioWhite = -1;
@@ -497,7 +496,7 @@ void solve_empty_req(struct mg_connection *nc, int ev, void *ev_data){
             mg_send_response_line(nc, 200,
                                    "Content-Type: text/html\r\n"
                                    "Connection: close");
-              mg_printf(nc, "%s %s", cyr_str, version);
+              mg_printf(nc, "%s", cyr_str);
               nc->flags |= MG_F_SEND_AND_CLOSE;
        
 }
