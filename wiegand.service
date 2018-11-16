@@ -1,0 +1,14 @@
+Description=WIEGANDSERVER
+
+Wants=network.target
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/pi/bin/ITProjectRFIDWiegandController
+Restart=on-failure
+RestartSec=10
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
